@@ -7,8 +7,6 @@
 .prettierignore
 .prettierrc
 .env
-package-lock.json
-package.json
 src
 tsconfig.json
 jest.config.ts
