@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<ErrorScreen
+  onHandleButtonClick={[MockFunction]}
+>
+  <div
+    className="zamp-error-screen-wrapper"
+  >
+    <div
+      className="error-icon-container"
+    >
+      <img
+        alt="transaction failed icon"
+        src="undefined/public/images/transaction-failed-icon.svg"
+      />
+      <div
+        className="error-type-container"
+      >
+        Transaction Failed
+      </div>
+      <div
+        className="error-message-container"
+      >
+        We are unable to allow this transaction at this point.
+      </div>
+    </div>
+    <button
+      className="button-container"
+      onClick={[Function]}
+    >
+      CHOOSE ANOTHER WALLET
+    </button>
+  </div>
+</ErrorScreen>
+`;

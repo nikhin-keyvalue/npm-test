@@ -1,0 +1,70 @@
+.zamp-payment-details-wrapper {
+  padding: 27px 13px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in;
+  overflow-y: hidden;
+  margin-top: 11px;
+
+  .payment-details-total-amount-header {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #848484;
+    margin-bottom: 8px;
+  }
+
+  .payment-details-total-amount-container {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #270235;
+    margin-bottom: 5px;
+  }
+
+  .payment-details-coin-type {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #1f1f1f;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .coin-logo-wrapper {
+    margin-right: 4px;
+  }
+
+  .zamp-payment-details-price-container,
+  .zamp-payment-details-exchange-rate-container,
+  .zamp-payment-details-subtotal-container {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #7d7d7d;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px dotted #e5e5e5;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    margin-top: 17px;
+    margin-bottom: 19px;
+  }
+}
+
+.zamp-payment-details-visible {
+  height: 180px;
+}
+
+.zamp-payment-details-hidden {
+  height: 0;
+  padding: 0px 13px;
+  margin: 0;
+}

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<Footer>
+  <div
+    className="zamp-footer-wrapper"
+  >
+    powered by 
+    <span
+      className="zamp-footer-name"
+    >
+      ZAMP
+    </span>
+  </div>
+</Footer>
+`;

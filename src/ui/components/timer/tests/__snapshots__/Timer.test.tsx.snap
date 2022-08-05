@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<div
+  className="zamp-timer-wrapper"
+>
+  <div
+    className="zamp-border-circle"
+  >
+    <div
+      className="zamp-sektor-wrapper false"
+    >
+      <CircleCountDown
+        currentTime={0}
+        startTimer={false}
+        time={0}
+      />
+    </div>
+  </div>
+  <div
+    className="zamp-time-wrapper"
+  >
+    0:00 
+  </div>
+</div>
+`;

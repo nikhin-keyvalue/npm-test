@@ -1,0 +1,105 @@
+.pending-screen-container {
+  margin: auto;
+  width: 100%;
+  max-width: 412px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 40px;
+  line-height: 22px;
+  color: black;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: 768px) {
+    min-height: 45vh;
+  }
+
+  .pending-status-wrapper {
+    height: 153px;
+    width: calc(100% - 40px);
+    border: 1px solid #ebf5ec;
+    border-radius: 7px;
+    text-align: left;
+
+    .pending-message-wrapper {
+      height: 84px;
+      background-color: rgba(227, 224, 151, 0.1);
+      padding: 23px 17px;
+
+      .pending-title {
+        font-weight: 700;
+        font-size: 15px;
+        color: #e0ce2d;
+      }
+
+      .pending-details {
+        font-size: 12px;
+        color: #4f4f4f;
+      }
+    }
+
+    .pending-order-details {
+      height: 60px;
+      font-size: 12px;
+      padding: 9px 16px;
+      font-weight: 400;
+
+      .pending-order-id-title {
+        color: #dddddd;
+      }
+
+      .pending-order-id {
+        color: #2D2D2D;
+      }
+    }
+  }
+
+  .total-amount-container {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+  }
+
+  .coin-type-container {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cointype-image-conatiner {
+      padding-right: 6px;
+      width: 20px;
+    }
+  }
+
+  .button-conatainer {
+    margin-top: 90px;
+    @media (max-width: 768px) {
+      margin-top: 45px;
+    }
+  }
+
+  .redirection-container {
+    margin-top: 38px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: #1ca0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .timer-container {
+      padding-right: 17px;
+    }
+  }
+}

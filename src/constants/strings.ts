@@ -1,0 +1,9 @@
+export const TUTORIAL_TITLE = 'Please follow these steps in Binance App of your device';
+export const TUTORIAL_STEP_ONE = 'Click on wallets';
+export const TUTORIAL_STEP_TWO = 'Select the currency you have selected  here';
+export const TUTORIAL_STEP_THREE = 'Click on Withdrawal';
+export const TUTORIAL_STEP_FOUR = 'Make sure you select ‘Send via crypto network’';
+export const TUTORIAL_STEP_FIVE = 'Add the address';
+export const TUTORIAL_STEP_SIX = 'Select the corresponding network';
+export const TUTORIAL_STEP_SEVEN = 'Add the amount shown on the static page';
+export const TUTORIAL_STEP_EIGHT = 'Click withdrawal';

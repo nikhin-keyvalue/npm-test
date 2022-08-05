@@ -1,0 +1,14 @@
+src
+.babelrc
+.gitignore
+webpack.config.js
+data
+.vscode
+.eslintignore
+.eslintrc.js
+webpack.local.js
+webpack.prod.js
+tsconfig.json
+.prettierignore
+.prettierrc
+jest.config.ts

@@ -1,0 +1,63 @@
+  .zamp-primary-button {
+    width: 164px;
+    height: 40px;
+    border: 1px solid #1ca0f0;
+    border-radius: 46px;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.19);
+    color: #1ca0f0;
+    background: #ffffff;
+    cursor: pointer;
+
+    @media screen and (max-width : 400px) {
+      width: 150px;
+    }
+  }
+  
+  .zamp-secondary-button {
+    width: 164px;
+    height: 40px;
+    border: 1px solid #1ca0f0;
+    border-radius: 46px;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.19);
+    background: #1ca0f0;
+    color: #ffffff;
+    cursor: pointer;
+
+    @media screen and (max-width : 400px) {
+      width: 150px;
+    }
+  }
+
+  .zamp-secondary-button[disabled] {
+    cursor: not-allowed;
+    background: #fafafa;
+    color: #cacaca;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+  }
+
+  .zamp-disconnect-button {
+    height: 32px;
+    padding: 5px 15px;
+    border: 1px solid #E7E7E7;
+    border-radius: 14px;
+    background: #FAFAFA;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #4F4F4F;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #4F4F4F;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .zamp-disconnect-button[disabled] {
+    cursor: not-allowed;
+    &:hover {
+      border: 1px solid #E7E7E7;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    }
+  }

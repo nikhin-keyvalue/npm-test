@@ -1,0 +1,101 @@
+.zamp-bit-coin-container {
+  width: 100%;
+  margin: 32px 0px;
+
+  .zamp-bit-coin-payment-details-container {
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    padding: 21px 15px 30px;
+
+    .zamp-bit-coin-payment-amount-header-container {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 17px;
+    }
+
+    .zamp-bit-coin-payment-details {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #7d7d7d;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px dashed #e5e5e5;
+      height: 1px;
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+
+    .zamp-bit-coin-qr-code-container {
+      margin: 29px 55px 0px;
+      position: relative;
+
+      .zamp-bit-coin-qr-code-header {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        color: #4f4f4f;
+      }
+
+      .zamp-bit-coin-qr-code-scan-header {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        color: #2d2d2d;
+      }
+
+      .zamp-bit-coin-qr-code-wallet-address {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: #7d7d7d;
+        margin-bottom: 13px;
+
+        .zamp-bit-coin-qr-code-wallet-address-text {
+          max-width: 200px;
+          word-break: break-all;
+        }
+      }
+
+      .qr-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 22px;
+      }
+      
+      .zamp-bit-coin-timer-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .zamp-bit-coin-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zamp-bit-coin-copy-icon {
+    cursor: pointer;
+  }
+}

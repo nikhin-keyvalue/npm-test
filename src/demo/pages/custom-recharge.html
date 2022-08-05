@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Probo Recharge Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="../merchant.js"></script>
+  <style>
+    body {
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .prob-checkout-page {
+      background-color: #fafafa;
+      width: 100%;
+      height: 100%;
+    }
+
+    .prob-content-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      height: 100%;
+      background-color: #fff;
+      margin: auto;
+    }
+
+    .prob-topbar-wrapper {
+      height: fit-content;
+      padding: 15px 5px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      text-align: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .prob-topbar-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #1c2933;
+    }
+
+    .prob-topbar-back-icon {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    .prob-topbar-back-icon:hover {
+      opacity: 0.7;
+    }
+
+    .prob-contents {
+      padding: 30px;
+    }
+
+    .prob-payment-title {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: 600;
+      color: #1c2933;
+    }
+
+    .prob-amount-input {
+      width: 100%;
+      height: 50px;
+      background-color: #ededed;
+      color: #000000;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      padding: 0 16px;
+      margin-top: 20px;
+      vertical-align: middle;
+    }
+
+    .pay-btn {
+      height: 50px;
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 25px;
+      cursor: pointer;
+      text-align: left;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pay-crypto {
+      background-color: #1ca0f0;
+    }
+
+    .pay-card {
+      background-color: #6730ca;
+    }
+
+    .zamp-success {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    ::-webkit-input-placeholder {
+      /* Edge */
+      font-size: 15px;
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      font-size: 15px;
+    }
+
+    ::placeholder {
+      font-size: 15px;
+    }
+
+    .zamp-sdk-loading-container {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 430px;
+      height: 100%;
+      background-color: rgba(99, 99, 99, 0.2);
+    }
+
+    .zamp-sdk-loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 40%);
+    }
+
+    .merchant-page-indication {
+      position: absolute;
+      bottom: 30px;
+      width: calc(100% - 60px);
+      text-align: center;
+      border-radius: 10px;
+      height: 45px;
+      line-height: 45px;
+      color: #C5C5C5;
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="prob-checkout-page">
+    <div class="prob-content-wrapper">
+      <div class="prob-topbar-wrapper">
+        <div class="prob-topbar-go-back-wrapper">
+          <img src="public/back.svg" alt="Back button" height="12" class="prob-topbar-back-icon" />
+        </div>
+        <div class="prob-topbar-title">Recharge</div>
+      </div>
+
+      <div id="checkout" class="prob-contents">
+        <div class="prob-payment-title">Enter amount (in $)</div>
+        <input name="amount" class="prob-amount-input" id="amount" type="number" placeholder="Enter amount" min="0"/>
+        <button class="pay-btn pay-crypto" id="btn" class="zamp-button">
+          Recharge with Crypto
+          <img src="public/crypto-icon.png" alt="Crypto icon" height="22px" />
+        </button>
+        <button class="pay-btn pay-card">
+          Recharge with Card/UPI
+          <img src="public/card.png" alt="Crypto icon" height="20px" />
+        </button>
+        <div class="zamp-sdk-loading-container" style="display: none" id="loader">
+          <div class="zamp-sdk-loading">
+            <img src="public/connecting-zamp.gif" width="153px" />
+          </div>
+        </div>
+        <div class="merchant-page-indication">Merchant checkout page</div>
+      </div>
+
+      <div class="prob-contents">
+        <div id="success" style="display: none">
+          <img src="https://probo.in/static/media/logo.27768a2b.svg" height="30px" alt="" />
+          <div class="zamp-sucess">Payment Success</div>
+        </div>
+        <div id="failure" style="display: none">
+          <h1 class="zamp-failure">Payment Failure</h1>
+        </div>
+      </div>
+    </div>
+    <div id="zamp-checkout-btn"></div>
+  </div>
+</body>
+
+</html>

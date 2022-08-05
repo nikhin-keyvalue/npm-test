@@ -1,0 +1,79 @@
+.zamp-connection-info-wrapper {
+  width: calc(100% - 40px);
+  margin: 13px 20px 0px;
+  border-radius: 6px;
+  background: #f8f8f8;
+  padding: 18px 20px;
+  color: #616161;
+  font-size: 15px;
+  font-weight: 400;
+
+  .zamp-connection-info {
+    display: flex;
+    justify-content: space-between;
+
+    .zamp-connection-info-wallet-items {
+      display: flex;
+      justify-content: space-between;
+
+      .zamp-connection-info-wallet-data {
+        display: flex;
+  
+        .zamp-connection-info-connected-wallet-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 6px;
+          margin-top: 4px;
+        }
+    
+        .zamp-connection-primary-info {
+          display: flex;
+          flex-direction: column;
+    
+          .zamp-connection-details {
+            display: flex;
+            flex-direction: column;
+    
+            .zamp-connection-address {
+              display: flex;
+              align-items: center;
+            }
+    
+            .zamp-connection-status {
+              width: 10px;
+              height: 10px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .zamp-connection-disconnect-info {
+    flex-direction: column;
+    
+    .zamp-connection-info-wallet-items {
+      border-bottom: 1px solid #E7E7E7;
+      padding-bottom: 12px;
+
+      .zamp-connection-info-wallet-data {
+        margin-right: 5px;
+
+        .zamp-connection-primary-info {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .zamp-connection-info-disconnect-container {
+        margin-left: 10px;
+      }
+    }
+    
+    .zamp-connection-info-timer {
+      margin-top: 9px;
+    }
+  }
+}

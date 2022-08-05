@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<PendingScreen
+  amount="0.0001"
+  handlePaymentCompleted={[Function]}
+  selectedAmount=""
+  selectedCoinObject={Object {}}
+  successPageDisplayTime={1000}
+>
+  <div
+    className="pending-screen-container"
+  >
+    <img
+      alt="Pending Icon"
+      src="undefined/public/icons/pending-icon.svg"
+      style="width:60%"
+    />
+    <div
+      className="pending-status-wrapper"
+    >
+      <div
+        className="pending-message-wrapper"
+      >
+        <div
+          className="pending-title"
+        >
+          Payment Processing
+        </div>
+        <div
+          className="pending-details"
+        >
+          You will be redirected to Merchant site soon
+        </div>
+      </div>
+      <div
+        className="pending-order-details"
+      >
+        <div
+          className="pending-order-id-title"
+        >
+          Order ID
+        </div>
+        <div
+          className="pending-order-id-"
+        >
+          ZAJ453129913iL4
+        </div>
+      </div>
+    </div>
+  </div>
+</PendingScreen>
+`;

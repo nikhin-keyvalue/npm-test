@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<Header
+  sourceAmount="0"
+  sourceCurrency="$"
+  userDetails={
+    Object {
+      "id": "123",
+      "logo": "logo",
+      "name": "name test",
+    }
+  }
+>
+  <div
+    className="zamp-header-wrapper"
+  >
+    <div
+      className="zamp-header-title"
+    >
+      <img
+        alt="Merchant logo"
+        height="30"
+        src="logo"
+      />
+    </div>
+    <div
+      className="zamp-amount-container"
+    >
+      <div
+        className="zamp-amount"
+      >
+        $
+         
+        0
+        <span
+          className="zamp-amount-decimal-value"
+        >
+          .00
+        </span>
+      </div>
+    </div>
+  </div>
+</Header>
+`;

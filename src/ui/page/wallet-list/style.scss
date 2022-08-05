@@ -1,0 +1,38 @@
+.zamp-wallet-container {
+  width: 100%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 78px;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  .zamp-wallet-label-container {
+    display: flex;
+    align-items: center;
+
+    .wallet-icons {
+      margin-right: 10px;
+      width: 22px;
+      height: 22px;
+    }
+    
+    .wallet-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  }
+}

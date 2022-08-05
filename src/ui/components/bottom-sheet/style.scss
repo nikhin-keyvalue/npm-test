@@ -1,0 +1,42 @@
+.zamp-bottom-sheet-wrapper {
+  position: fixed;
+  background-color: rgba(174, 174, 174, 0.247);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 10;
+  left: 0;
+  top: 0;
+
+  .zamp-bottom-sheet-content {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 16px 16px 0px 0px;
+    padding: 43px 32px;
+    transition: all 250ms ease;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .zamp-bottomsheet-mobile-padding {
+    padding: 53px 32px 80px;
+  }
+}
+
+.zamp-bottom-sheet-open {
+  display: block;
+}
+
+.zamp-sheet-content-open {
+  bottom: 0px;
+  transition: all 0.5s ease;
+}
+
+.zamp-sheet-content-close {
+  bottom: -300px;
+  transition: all 0.5s ease-in-out;
+}

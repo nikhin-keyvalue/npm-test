@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinList render components 1`] = `
+<CoinList
+  address="0x1234"
+  amount="0"
+  balances={Array []}
+  convertedAmounts={
+    Array [
+      Object {
+        "amount": "0",
+        "contract_address": "",
+        "currency_code": "ETH",
+        "display_name": "Ethereum",
+        "exchange_rate": "0",
+        "logo_url": "",
+        "lowest_denom_amount": "",
+        "type": "crypto",
+      },
+    ]
+  }
+  currentChain="0x4"
+  handlePageChange={[MockFunction]}
+  isBottomSheetOpen={null}
+  isPaymentStarted={false}
+  onCoinSelect={[MockFunction]}
+  onTransactionCompleted={[MockFunction]}
+  selectedChain="0x4"
+  selectedWallet={
+    Object {
+      "id": "",
+      "logo_url": "",
+      "name": "Metamask",
+      "type": "",
+    }
+  }
+  setBottomSheetOpen={[Function]}
+  setCurrentPage={[MockFunction]}
+  setIsPaymentStarted={[MockFunction]}
+  setModalOpen={[MockFunction]}
+  setSelectedAmount={[MockFunction]}
+  setSelectedCoinObject={[MockFunction]}
+  sourceCurrency="USD"
+>
+  <div
+    className="zamp-coin-container"
+  >
+    <div
+      className="zamp-coin-wrapper"
+      key="ETH"
+    >
+      <div
+        className="zamp-coin-info"
+      >
+        <div
+          className="zamp-coin-item"
+        >
+          <div
+            className="zamp-coin-details"
+          >
+            <div>
+              <img
+                alt="Coin"
+                height="20"
+                src=""
+              />
+            </div>
+            <div>
+              <div
+                className="zamp-coin-name"
+              >
+                Ethereum
+              </div>
+              <div
+                className="zamp-coin-value"
+                onClick={[Function]}
+                role="presentation"
+              >
+                0.0000000000 ETH
+                <img
+                  alt="Arrow icon"
+                  className="zamp-coin-arrow-icon"
+                  src="undefined/public/images/right-arrow.svg"
+                  style={
+                    Object {
+                      "transform": "rotate(90deg)",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="zamp-coin-list-button-container false"
+            role="presentation"
+          >
+            <Button
+              buttonLabel="Pay now"
+              handleButtonClick={[Function]}
+              height="32px"
+              isDisabled={false}
+              type="secondary"
+              width="73px"
+            >
+              <button
+                className="zamp-secondary-button"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "height": "32px",
+                    "width": "73px",
+                  }
+                }
+              >
+                Pay now
+              </button>
+            </Button>
+            <div
+              className="zamp-insufficient-fund-indicator-container"
+            >
+              Low Balance
+            </div>
+          </div>
+        </div>
+        <PaymentDetails
+          currencyCode="ETH"
+          exchangeRate="0"
+          isVisible={false}
+          sourceCurrency="USD"
+          subTotal="0"
+          totalPrice="0"
+        >
+          <div
+            className="zamp-payment-details-wrapper zamp-payment-details-hidden"
+          >
+            <div
+              className="zamp-payment-details-price-container"
+            >
+              <div
+                className="total-price-header"
+              >
+                Total Price
+              </div>
+              <div
+                className="total-price"
+              >
+                0 USD
+              </div>
+            </div>
+            <div
+              className="zamp-payment-details-exchange-rate-container"
+            >
+              <div
+                className="exchange-rate-header"
+              >
+                Exchange Rate
+              </div>
+              <div
+                className="exchange-rate"
+              >
+                0 USD
+              </div>
+            </div>
+            <hr />
+            <div
+              className="zamp-payment-details-subtotal-container"
+            >
+              <div
+                className="subtotal-header"
+              >
+                Subtotal
+              </div>
+              <div
+                className="subtotal"
+              >
+                0 ETH
+              </div>
+            </div>
+          </div>
+        </PaymentDetails>
+        <BottomSheet
+          isOpen={false}
+          setBottomSheetOpen={[Function]}
+        >
+          <div
+            className="zamp-bottom-sheet-wrapper "
+            onClick={[Function]}
+            role="presentation"
+          >
+            <div
+              className="zamp-bottom-sheet-content zamp-sheet-content-close "
+              onClick={[Function]}
+              role="presentation"
+            >
+              <PaymentDetails
+                coinLogourl=""
+                coinName="Ethereum"
+                currencyCode="ETH"
+                exchangeRate="0"
+                handlePayButtonClick={[Function]}
+                isPayButtonDisabled={false}
+                sourceCurrency="USD"
+                subTotal="0"
+                totalPrice="0"
+              >
+                <div
+                  className="zamp-payment-details-bottomsheet-wrapper"
+                >
+                  <div
+                    className="zamp-payment-details-bottomsheet-head"
+                  >
+                    <div
+                      className="zamp-payment-details-bottomsheet-head-total-header"
+                    >
+                      Total Amount
+                    </div>
+                    <div
+                      className="zamp-payment-details-bottomsheet-head-total"
+                    >
+                      0
+                       
+                      ETH
+                    </div>
+                    <div
+                      className="zamp-payment-details-bottomsheet-head-coin-details"
+                    >
+                      <img
+                        alt="Coin-logo"
+                        height={8}
+                        src=""
+                        width={8}
+                      />
+                      <div
+                        className="zamp-payment-details-bottomsheet-head-coin-name"
+                      >
+                        Ethereum
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="zamp-payment-details-price-container"
+                  >
+                    <div
+                      className="total-price-header"
+                    >
+                      Total Price
+                    </div>
+                    <div
+                      className="total-price"
+                    >
+                      0 USD
+                    </div>
+                  </div>
+                  <div
+                    className="zamp-payment-details-exchange-rate-container"
+                  >
+                    <div
+                      className="exchange-rate-header"
+                    >
+                      Exchange Rate
+                    </div>
+                    <div
+                      className="exchange-rate"
+                    >
+                      0 USD
+                    </div>
+                  </div>
+                  <hr />
+                  <div
+                    className="zamp-payment-details-subtotal-container"
+                  >
+                    <div
+                      className="subtotal-header"
+                    >
+                      Subtotal
+                    </div>
+                    <div
+                      className="subtotal"
+                    >
+                      0 ETH
+                    </div>
+                  </div>
+                  <div
+                    className="zamp-payment-details-bottomsheet-button-container"
+                  >
+                    <Button
+                      buttonLabel="Pay now"
+                      handleButtonClick={[Function]}
+                      isDisabled={false}
+                      type="secondary"
+                      width="100px"
+                    >
+                      <button
+                        className="zamp-secondary-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        Pay now
+                      </button>
+                    </Button>
+                  </div>
+                </div>
+              </PaymentDetails>
+            </div>
+          </div>
+        </BottomSheet>
+      </div>
+    </div>
+  </div>
+</CoinList>
+`;

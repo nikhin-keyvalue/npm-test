@@ -1,0 +1,53 @@
+.zamp-header-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 36px 20px 40px 20px;
+  height: fit-content;
+  border-bottom: 1px dashed #E7E7E7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .zamp-header-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 7px;
+
+    .zamp-order-id {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      color: #626262;
+    }
+  }
+
+  .zamp-paying-title-container {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #626262;
+  }
+
+  .zamp-amount-container {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #343434;
+    display: flex;
+    justify-content: left;
+    overflow: hidden;
+    margin-right: 5px;
+
+    .zamp-amount {
+      margin-left: 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .zamp-amount-decimal-value {
+        font-size: 15px;
+      }
+    }
+  }
+}

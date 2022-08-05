@@ -1,0 +1,18 @@
+.zamp-checkout-page-content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10000000;
+  background-color: transparent;
+  display: flex;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,106 @@
+.zamp-metamask-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .zamp-modal-icon-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      margin: 0px 5px;
+    }
+
+    .dot-flashing {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #9880ff;
+      color: #9880ff;
+      animation: dotFlashing 1s infinite linear alternate;
+      animation-delay: 0.5s;
+      display: flex;
+      margin: 0px 20px;
+    }
+
+    .dot-flashing::before,
+    .dot-flashing::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+    }
+
+    .dot-flashing::before {
+      left: -15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #9880ff;
+      color: #9880ff;
+      animation: dotFlashing 1s infinite alternate;
+      animation-delay: 0s;
+    }
+
+    .dot-flashing::after {
+      left: 15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #9880ff;
+      color: #9880ff;
+      animation: dotFlashing 1s infinite alternate;
+      animation-delay: 1s;
+    }
+
+    @keyframes dotFlashing {
+      0% {
+        background-color: #9880ff;
+      }
+      50%,
+      100% {
+        background-color: #ebe6ff;
+      }
+    }
+  }
+
+  .zamp-modal-description {
+    margin-top: 23px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  .zamp-modal-wallet-connect-indicator {
+    margin-top: 28px;
+    background-color: #f5f8fd;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .zamp-modal-indicatior-gif {
+      transform: scale(1.5);
+      object-fit: cover;
+      opacity: 0.5;
+    }
+  }
+
+  .zamp-cancel-container {
+    position: absolute;
+    bottom: -45px;
+    padding: 2px 6px 2px;
+    border-radius: 5px;
+    color: #7D7D7D;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Manrope';
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<BottomSheet
+  isOpen={true}
+  setBottomSheetOpen={[Function]}
+>
+  <div
+    className="zamp-bottom-sheet-wrapper zamp-bottom-sheet-open"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <div
+      className="zamp-bottom-sheet-content zamp-sheet-content-close "
+      onClick={[Function]}
+      role="presentation"
+    />
+  </div>
+</BottomSheet>
+`;

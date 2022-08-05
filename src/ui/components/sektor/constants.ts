@@ -1,0 +1,4 @@
+const SECTOR_COLOR = '#FFFFFF';
+const CIRCLE_COLOR = '#4F4F4F';
+
+export { SECTOR_COLOR, CIRCLE_COLOR };

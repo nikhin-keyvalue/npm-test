@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter render components 1`] = `
+<SuccessScreen
+  account=""
+  handlePaymentCompleted={[Function]}
+  orderId=""
+  successPageDisplayTime={10}
+>
+  <div
+    className="success-screen-container"
+  >
+    <img
+      alt="Pending Icon"
+      className="success-screen-logo"
+      src="undefined/public/icons/pending-icon.svg"
+    />
+    <div
+      className="success-screen-status-wrapper"
+    >
+      <div
+        className="success-screen-message-wrapper"
+      >
+        <div
+          className="success-screen-title"
+        >
+          Payment Processing
+        </div>
+        <div
+          className="success-screen-details"
+        >
+          You will be redirected to Merchant site soon
+        </div>
+      </div>
+      <div
+        className="success-screen-order-wrapper"
+      >
+        <div
+          className="success-screen-order-details"
+        >
+          <div
+            className="success-screen-order-title"
+          >
+            Order ID
+          </div>
+          <div
+            className="success-screen-order-data"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="success-screen-button-container"
+    >
+      <Button
+        buttonLabel="Done"
+        handleButtonClick={[Function]}
+        isDisabled={false}
+        type="secondary"
+        width="100px"
+      >
+        <button
+          className="zamp-secondary-button"
+          disabled={false}
+          onClick={[Function]}
+          style={
+            Object {
+              "height": undefined,
+              "width": "100px",
+            }
+          }
+        >
+          Done
+        </button>
+      </Button>
+    </div>
+    <div
+      className="success-screen-redirection-container"
+    >
+      <SuccessTimer
+        handlePaymentCompleted={[Function]}
+        timeDuration={10}
+      >
+        <div
+          className="base-timer"
+        >
+          <svg
+            className="base-timer__svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              className="base-timer__circle"
+            >
+              <path
+                className="base-timer__path-remaining"
+                d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+                id="base-timer-path-remaining"
+                stroke-dasharray="283"
+                strokeDasharray="283"
+              />
+            </g>
+          </svg>
+          <span
+            className="base-timer__label"
+            id="base-timer-label"
+          >
+            10
+          </span>
+        </div>
+      </SuccessTimer>
+      <div
+        className="success-screen-redirection-label"
+      >
+        Redirecting to Probo
+      </div>
+    </div>
+  </div>
+</SuccessScreen>
+`;

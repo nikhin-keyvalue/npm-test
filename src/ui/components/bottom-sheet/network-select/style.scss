@@ -1,0 +1,47 @@
+.zamp-network-select-bottomsheet-wrapper {
+  position: relative;
+  border-radius: 8px;
+  z-index: 1;
+
+  .zamp-network-select-bottomsheet-header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  .zamp-network-select-bottomsheet-list {
+    width: 100%;
+    border-radius: 8px;
+
+    .zamp-network-select-bottomsheet-item {
+      cursor: pointer;
+      height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f5f5f5;
+
+      .zamp-network-select-bottomsheet-text-elements {
+        display: flex;
+        align-items: center;
+
+        .zamp-network-select-bottomsheet-item-icon {
+          height: 15px;
+        }
+
+        .zamp-selected-title {
+          font-family: 'Manrope';
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .zamp-network-select-bottomsheet-item-selected {
+      background-color: rgba(141, 191, 222, 0.08);
+    }
+  }
+}

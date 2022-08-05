@@ -1,0 +1,15 @@
+.zamp-footer-wrapper {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  max-width: 320px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 5px;
+  color: #C5C5C5;
+  
+  .zamp-footer-name {
+    font-weight: 600;
+    font-size: 13px;
+  }
+}

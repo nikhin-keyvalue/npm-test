@@ -1,0 +1,55 @@
+.zamp-error-screen-wrapper {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Manrope";
+  font-style: normal;
+  line-height: 22px;
+  color: black;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: 768px) {
+    min-height: 45vh;
+  }
+
+  .error-icon-container {
+    padding-bottom: 6px;
+  }
+
+  .error-type-container {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ca333e;
+    padding-bottom: 17px;
+  }
+
+  .error-message-container {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 17px;
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: none;
+    border-color: whitesmoke;
+    font-weight: 600;
+    font-size: 15px;
+    min-width: 200px;
+    min-height: 51px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,35 @@
+.zamp-topbar-wrapper{
+  width: 100%;
+  box-sizing: border-box;
+  height: fit-content;
+  padding: 15px 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  position: relative;
+
+  .zamp-topbar-title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #1C2933;
+  }
+
+  .zamp-topbar-back-icon{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .zamp-toolbar-disabled-icon {
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

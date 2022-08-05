@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader render components 1`] = `
+<Loader
+  type="default"
+>
+  <div
+    className="zamp-loader-wrapper"
+  >
+    <img
+      alt="Loading..."
+      className="zamp-default-loader-gif-container"
+      src="undefined/public/gif/default-loader.gif"
+    />
+  </div>
+</Loader>
+`;

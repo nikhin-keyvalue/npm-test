@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content render / unmount page 1`] = `
+<Content
+  isError={false}
+  onPaymentCancel={[MockFunction]}
+  onPaymentCompleted={[MockFunction]}
+  paymentSession={Object {}}
+  zampSession={
+    Object {
+      "merchantConfig": Object {
+        "available_networks": Array [
+          Object {
+            "eligible_payment_options": Array [],
+            "network_code": "ETH",
+          },
+        ],
+        "default_network": "ETH",
+        "merchant": Object {},
+        "payment_options": Array [],
+      },
+      "paymentInfo": Object {
+        "id": 1,
+        "source_amount": 0,
+      },
+    }
+  }
+>
+  <div
+    className="zamp-checkout-page"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <Topbar
+      isDisabled={false}
+      onBackButtonClick={[Function]}
+    >
+      <div
+        className="zamp-topbar-wrapper"
+      >
+        <div
+          className="zamp-topbar-go-back-wrapper"
+        >
+          <img
+            alt="Back button"
+            className="zamp-topbar-back-icon false"
+            height="12"
+            onClick={[Function]}
+            src="undefined/public/icons/back.svg"
+          />
+        </div>
+        <div
+          className="zamp-topbar-title"
+        >
+          Recharge by crypto
+        </div>
+      </div>
+    </Topbar>
+    <div
+      className="zamp-checkout-page-contents"
+    >
+      <div
+        className="zamp-checkout-page-content-body"
+      >
+        <Header
+          orderId={1}
+          sourceAmount={0}
+          userDetails={Object {}}
+        >
+          <div
+            className="zamp-header-wrapper"
+          >
+            <div
+              className="zamp-header-title"
+            >
+              <img
+                alt="Merchant logo"
+                height="30"
+              />
+            </div>
+            <div
+              className="zamp-amount-container"
+            >
+              <div
+                className="zamp-amount"
+              >
+                 
+                0
+                <span
+                  className="zamp-amount-decimal-value"
+                >
+                  .00
+                </span>
+              </div>
+            </div>
+          </div>
+        </Header>
+        <div
+          className="zamp-content-wrapper false"
+        >
+          <div
+            className="zamp-title"
+          >
+            Network
+          </div>
+          <NetworkSelect
+            isBottomSheetOpen={null}
+            isDropDownActive={false}
+            itemInitialValue={
+              Object {
+                "eligible_payment_options": Array [],
+                "network_code": "ETH",
+              }
+            }
+            itemsList={
+              Array [
+                Object {
+                  "eligible_payment_options": Array [],
+                  "network_code": "ETH",
+                },
+              ]
+            }
+            onSelectItem={[Function]}
+            setBottomSheetOpen={[Function]}
+            setDropDownActive={[Function]}
+          >
+            <div
+              className="zamp-dropdown-wrapper"
+            >
+              <div
+                className="zamp-dropdown-list "
+              />
+            </div>
+          </NetworkSelect>
+          <div
+            className="zamp-title"
+          >
+            Wallet/Exchange
+          </div>
+          <WalletList
+            onWalletConnected={[Function]}
+            rpcUrls={Map {}}
+            selectedChainObject={
+              Object {
+                "eligible_payment_options": Array [],
+                "network_code": "ETH",
+              }
+            }
+            setAddress={[Function]}
+            setCurrentChain={[Function]}
+            setModalOpen={[Function]}
+            setRemoveWalletListener={[Function]}
+            setSelectedWallet={[Function]}
+            walletList={Array []}
+          >
+            <div>
+              <div
+                className="zamp-wallet-container"
+                key="nikhin"
+                onClick={[Function]}
+                role="presentation"
+              >
+                <div
+                  className="zamp-wallet-label-container"
+                >
+                  <img
+                    alt=""
+                    className="wallet-icons"
+                    src="undefined/public/icons/generic-crypto.svg"
+                  />
+                  <div
+                    className="wallet-name"
+                  >
+                    Pay with Exchange
+                  </div>
+                </div>
+                <div
+                  className="arrow-container"
+                >
+                  <img
+                    alt=""
+                    height="15"
+                    src="undefined/public/icons/exchange-icons.svg"
+                    style="margin-right: 10px;"
+                  />
+                  <img
+                    alt=""
+                    height="11"
+                    src="undefined/public/images/right-arrow.svg"
+                  />
+                </div>
+              </div>
+              <div
+                className="zamp-wallet-container"
+                key="nik"
+                onClick={[Function]}
+                role="presentation"
+              >
+                <div
+                  className="zamp-wallet-label-container"
+                >
+                  <img
+                    alt=""
+                    className="wallet-icons"
+                    src="undefined/public/icons/pay-with-qr.svg"
+                  />
+                  <div
+                    className="wallet-name"
+                  >
+                    Pay with QR
+                  </div>
+                </div>
+                <div
+                  className="arrow-container"
+                >
+                  <img
+                    alt=""
+                    height="11"
+                    src="undefined/public/images/right-arrow.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </WalletList>
+        </div>
+      </div>
+      <Footer>
+        <div
+          className="zamp-footer-wrapper"
+        >
+          powered by 
+          <span
+            className="zamp-footer-name"
+          >
+            ZAMP
+          </span>
+        </div>
+      </Footer>
+    </div>
+    <BottomSheet
+      isOpen={false}
+      setBottomSheetOpen={[Function]}
+    >
+      <div
+        className="zamp-bottom-sheet-wrapper "
+        onClick={[Function]}
+        role="presentation"
+      >
+        <div
+          className="zamp-bottom-sheet-content zamp-sheet-content-close "
+          onClick={[Function]}
+          role="presentation"
+        >
+          <GoBack
+            description=" upon confirmation, this transaction will be cancelled, and you’ll have to start a new payment"
+            onPrimaryButtonClick={[Function]}
+            primaryButtonLabel="Yes, leave"
+            secondaryButtonLabel="No"
+            title="Leaving? you won’t be able to continue this transaction"
+            toggleSheetOpen={[Function]}
+          >
+            <div>
+              <div
+                className="zamp-bottom-sheet-title"
+              >
+                Leaving? you won’t be able to continue this transaction
+              </div>
+              <div
+                className="zamp-bottom-sheet-desc"
+              >
+                 upon confirmation, this transaction will be cancelled, and you’ll have to start a new payment
+              </div>
+              <div
+                className="zamp-bottom-sheet-button-container"
+              >
+                <Button
+                  buttonLabel="Yes, leave"
+                  handleButtonClick={[Function]}
+                  isDisabled={false}
+                  type="primary"
+                >
+                  <button
+                    className="zamp-primary-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "height": undefined,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    Yes, leave
+                  </button>
+                </Button>
+                <Button
+                  buttonLabel="No"
+                  handleButtonClick={[Function]}
+                  isDisabled={false}
+                  type="secondary"
+                >
+                  <button
+                    className="zamp-secondary-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "height": undefined,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    No
+                  </button>
+                </Button>
+              </div>
+            </div>
+          </GoBack>
+        </div>
+      </div>
+    </BottomSheet>
+  </div>
+</Content>
+`;

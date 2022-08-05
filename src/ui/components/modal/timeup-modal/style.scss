@@ -1,0 +1,27 @@
+.zamp-time-up-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+
+  .zamp-time-up-modal-header {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 10px;
+  }
+
+  .zamp-time-up-modal-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+  }
+  
+  .zamp-time-up-modal-redirection-time{
+    font-weight: 600;  
+  }
+}

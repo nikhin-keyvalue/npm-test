@@ -1,0 +1,119 @@
+.zamp-binance-screen-container {
+  display: flex;
+  flex-direction: column;
+
+  .zamp-binance-screen-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 18px 12px;
+    margin-top: 30px;
+    background-color: #F8F8F8;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid #FFFFFF;
+  
+    .zamp-binance-screen-title {
+      display: flex;
+      margin-bottom: 17px;
+  
+      .zamp-binance-screen-amount {
+        color: #4F4F4F;
+        font-weight: 800;
+        font-size: 18px;
+        font-family: 'Manrope';
+        margin-right: 13px;
+      }
+  
+      img {
+        cursor: pointer;
+        width: 16px;
+      }
+    }
+  
+    .zamp-binance-screen-rates-container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 13px;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #E5E5E5;
+      gap: 5px;
+  
+      .zamp-binance-screen-price-row {
+        display: flex;
+        justify-content: space-between;
+  
+        .zamp-binance-screen-price-label {
+          color: #7D7D7D;
+          font-weight: 500;
+          font-size: 14px;
+          font-family: 'Manrope';
+        }
+      }
+    }
+  
+    .zamp-binance-screen-sub-total {
+      display: flex;
+      justify-content: space-between;
+  
+      .zamp-binance-screen-price-label {
+        color: #7D7D7D;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: 'Manrope';
+      }
+    }
+  }
+
+  .zamp-binance-send-content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px 30px;
+    margin-bottom: 127px;
+    background-color: #F8F8F8;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+    .zamp-binance-screen-send-label {
+      color: #2D2D2D;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: 'Manrope';
+      margin-bottom: 7px;
+    }
+
+    .zamp-binance-screen-address-container {
+      display: flex;
+      justify-content: space-between;
+
+      .zamp-binance-screen-address-label {
+        color: #7D7D7D;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: 'Manrope';
+        word-break: break-all;
+        max-width: 250px;
+      }
+
+      img {
+        width: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .zamp-binance-screen-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .zamp-balance-screen-tutor-link {
+      margin-top: 27px;
+      color: #7D7D7D;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: 'Manrope';
+      text-decoration: underline;
+      cursor:pointer;
+    }
+  }
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checkout Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" charset="UTF-8" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="../merchant.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      line-height: 18px;
+      font-family: 'Manrope';
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .prob-checkout-page {
+      background-color: #fafafa;
+      width: 100%;
+      height: 100%;
+    }
+
+    .prob-content-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      height: 100%;
+      background-color: #fff;
+      margin: auto;
+    }
+
+    .prob-topbar-wrapper {
+      height: fit-content;
+      padding: 15px 5px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      text-align: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .prob-topbar-back-icon:hover {
+      opacity: 0.7;
+    }
+
+    .prob-contents {
+      padding: 30px;
+    }
+
+    .prob-topbar-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #1c2933;
+    }
+
+    .prob-topbar-back-icon {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    .zamp-sdk-loading-container {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 430px;
+      height: 100%;
+      background-color: rgba(99, 99, 99, 0.2);
+    }
+
+    .zamp-sdk-loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 40%);
+    }
+
+    .merchant-page-indication {
+      position: absolute;
+      bottom: 30px;
+      width: calc(100% - 60px);
+      text-align: center;
+      border-radius: 10px;
+      height: 45px;
+      line-height: 45px;
+      color: #C5C5C5;
+      font-size: 18px;
+    }
+
+    .zamp-checkout-container {
+      width: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .zamp-checkout-gif {
+      background-color: #f6f6f6;
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      position: absolute;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .zamp-checkout-gif-bg {
+      display: flex;
+      position: absolute;
+      height: 302px;
+      width: 100%;
+      mix-blend-mode: multiply;
+    }
+
+    .zamp-checkout-description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 15px;
+    }
+
+    .zamp-checkout-incart {
+      padding-top: 22px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #9b9b9b;
+      padding-bottom: 9px;
+    }
+
+    .zamp-checkout-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .zamp-checkout-item-name {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      color: #000000;
+      padding-right: 4px;
+    }
+
+    .zamp-checkout-item-count {
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .zamp-checkout-ic1 {
+      color: #4f4f4f;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .zamp-checkout-ic2 {
+      color: #000000;
+      font-weight: 450;
+      font-size: 20px;
+      padding-left: 4px;
+    }
+
+    .zamp-checkout-category {
+      display: flex;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #4f4f4f;
+      padding-top: 4px;
+      align-items: baseline;
+    }
+
+    .zamp-checkout-cat {
+      padding-right: 20px;
+    }
+
+    .zamp-checkout-colour {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #4f4f4f;
+      padding-top: 8px;
+    }
+
+    .zamp-checkout-amount {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 32px;
+      background: #f6f6f6;
+      border-radius: 10px;
+      justify-content: space-around;
+    }
+
+    .zamp-checkout-subtotal {
+      display: flex;
+      flex-direction: row;
+      padding-top: 23px;
+      justify-content: space-between;
+    }
+
+    .zamp-checkout-taxtotal {
+      display: flex;
+      flex-direction: row;
+      padding-top: 14px;
+      justify-content: space-between;
+    }
+
+    .zamp-checkout-subtotal-item {
+      padding-left: 29px;
+      font-weight: 450;
+      font-size: 15px;
+      line-height: 18px;
+      color: #464646;
+    }
+
+    .zamp-checkout-subtotal-amount {
+      font-weight: 450;
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+      padding-right: 28px;
+    }
+
+    .zamp-checkout-line {
+      margin: 19px 44px 13px 28px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .zamp-checkout-total {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Manrope";
+    }
+
+    .zamp-checkout-tot-amount {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+      color: #686868;
+      padding-bottom: 0.3px;
+    }
+
+    .zamp-checkout-tot-price {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 21px;
+      color: #3a3a3a;
+      padding-bottom: 27px;
+    }
+
+    .zamp-checkout-pay-btn {
+      height: 48px;
+      width: calc(100% - 60px);
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      color: #ffffff;
+      cursor: pointer;
+      text-align: left;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #cc061d;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 30px;
+      position: absolute;
+      bottom: 30px;
+      box-shadow: 0px 0px 14px 3px rgb(255, 190, 190);
+      z-index: 1000;
+    }
+
+    @media only screen and (max-width: 450px) {
+      .zamp-checkout-pay-btn {
+        position: fixed;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="prob-checkout-page">
+    <div class="prob-content-wrapper">
+      <div class="prob-topbar-wrapper">
+        <div class="prob-topbar-go-back-wrapper">
+          <img src="public/back.svg" alt="Back button" height="12" class="prob-topbar-back-icon" />
+        </div>
+        <div class="prob-topbar-title">Checkout</div>
+      </div>
+
+      <div class="parent prob-contents">
+        <div class="zamp-checkout-gif">
+          <img src="public/sneaker.gif" alt="Gif" class="zamp-checkout-gif-bg" />
+          <lottie-player src="public/confetti.json" class="overlay" background="transparent" speed="1" loop autoplay>
+          </lottie-player>
+        </div>
+        <div class="zamp-checkout-description">
+          <div class="zamp-checkout-incart">In cart</div>
+          <div class="zamp-checkout-item">
+            <div class="zamp-checkout-item-name">Faye Sneaker</div>
+            <div class="zamp-checkout-item-count">
+              <div class="zamp-checkout-ic1">x</div>
+              <div class="zamp-checkout-ic2">1</div>
+            </div>
+          </div>
+          <div class="zamp-checkout-category">
+            <div class="zamp-checkout-cat">Sport Collection</div>
+            <div class="zamp-checkout-size">Size 8</div>
+          </div>
+          <div class="zamp-checkout-colour">Color: Black Multi</div>
+        </div>
+        <div class="zamp-checkout-amount">
+          <div class="zamp-checkout-subtotal">
+            <div class="zamp-checkout-subtotal-item">Subtotal</div>
+            <div class="zamp-checkout-subtotal-amount">$0.80</div>
+          </div>
+          <div class="zamp-checkout-taxtotal">
+            <div class="zamp-checkout-subtotal-item">Tax</div>
+            <div class="zamp-checkout-subtotal-amount">$0.20</div>
+          </div>
+          <div class="zamp-checkout-taxtotal">
+            <div class="zamp-checkout-subtotal-item">Total</div>
+            <div class="zamp-checkout-subtotal-amount">$1.00</div>
+          </div>
+          <div class="zamp-checkout-line"></div>
+          <div class="zamp-checkout-total">
+            <div class="zamp-checkout-tot-amount">Total amount</div>
+            <div class="zamp-checkout-tot-price">$ 1.00</div>
+          </div>
+
+        </div>
+        <button class="zamp-checkout-pay-btn pay-card" id="btn">
+          Pay with Crypto
+          <img src="public/crypto-icon.svg" alt="Crypto icon" height="20px" />
+        </button>
+      </div>
+    </div>
+
+    <div class="zamp-sdk-loading-container" style="display: none" id="loader">
+      <div class="zamp-sdk-loading">
+        <img src="public/connecting-zamp.gif" width="153px" />
+      </div>
+    </div>
+
+
+    <div class="">
+      <div id="success" style="display: none">
+        <img src="https://probo.in/static/media/logo.27768a2b.svg" height="30px" alt="" />
+        <div class="zamp-sucess">Payment Success</div>
+      </div>
+      <div id="failure" style="display: none">
+        <h1 class="zamp-failure">Payment Failure</h1>
+      </div>
+    </div>
+  </div>
+  <div id="zamp-checkout-btn"></div>
+  </div>
+</body>
+
+</html>

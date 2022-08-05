@@ -1,0 +1,63 @@
+.zamp-dropdown-wrapper {
+  height: 58px;
+  position: relative;
+  border-radius: 8px;
+  z-index: 1;
+  &:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .zamp-dropdown-list {
+    width: 100%;
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    padding: 0px 10px;
+
+    .zamp-dropdown-item {
+      cursor: pointer;
+      height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      .zamp-dropdown-text-elements {
+        display: flex;
+        align-items: center;
+
+        .zamp-dropdown-item-icon {
+          width: 18px;
+          height: 18px;
+        }
+
+        .zamp-selected-title {
+          font-family: "Manrope";
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          margin-left: 10px;
+        }
+      }
+      
+      .zamp-dropdown-arrow {
+        width: 10px;
+        transform: rotate(90deg);
+      }
+
+      .zamp-hide-dropdown-arrow {
+        display: none;
+      }
+    }
+  }
+
+  .dropdown-active {
+    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    background-color: white;
+
+    > .zamp-dropdown-item-selected {
+      background-color: rgba(141, 191, 222, 0.08);
+    }
+  }
+}

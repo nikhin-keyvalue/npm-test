@@ -1,0 +1,27 @@
+.zamp-payment-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #F8F8F8;
+  border-radius: 8px;
+  margin-top: 20px;
+
+  .zamp-payment-info-option-details {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .zamp-payment-info-option-name {
+      color: #2D2D2D;
+      font-weight: 600;
+      font-size: 14px;
+      font-family: 'Manrope';
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletList render components 1`] = `
+<WalletList
+  onWalletConnected={[Function]}
+  rpcUrls={
+    Map {
+      0 => "",
+    }
+  }
+  selectedChainObject={
+    Object {
+      "eligible_payment_options": Array [
+        "Metamask",
+      ],
+      "network_chain_id": "0x4",
+      "network_code": "ETH",
+      "network_display_name": "ETHEREUM",
+      "network_logo_url": "",
+      "rpc_url": "",
+    }
+  }
+  setAddress={[MockFunction]}
+  setCurrentChain={[MockFunction]}
+  setModalOpen={[MockFunction]}
+  setRemoveWalletListener={[MockFunction]}
+  setSelectedWallet={[MockFunction]}
+  walletList={
+    Object {
+      "Binance": Object {
+        "id": "",
+        "logo_url": "",
+        "name": "Binance",
+        "type": "",
+      },
+      "Metamask": Object {
+        "id": "",
+        "logo_url": "",
+        "name": "Metamask",
+        "type": "",
+      },
+      "Phantom": Object {
+        "id": "",
+        "logo_url": "",
+        "name": "Phantom",
+        "type": "",
+      },
+      "QRCode": Object {
+        "id": "",
+        "logo_url": "",
+        "name": "QRCode",
+        "type": "",
+      },
+      "WalletConnect": Object {
+        "id": "",
+        "logo_url": "",
+        "name": "WalletConnect",
+        "type": "",
+      },
+    }
+  }
+>
+  <div>
+    <div
+      className="zamp-wallet-container"
+      key="nikhin"
+      onClick={[Function]}
+      role="presentation"
+    >
+      <div
+        className="zamp-wallet-label-container"
+      >
+        <img
+          alt=""
+          className="wallet-icons"
+          src="undefined/public/icons/generic-crypto.svg"
+        />
+        <div
+          className="wallet-name"
+        >
+          Pay with Exchange
+        </div>
+      </div>
+      <div
+        className="arrow-container"
+      >
+        <img
+          alt=""
+          height="15"
+          src="undefined/public/icons/exchange-icons.svg"
+          style="margin-right: 10px;"
+        />
+        <img
+          alt=""
+          height="11"
+          src="undefined/public/images/right-arrow.svg"
+        />
+      </div>
+    </div>
+    <div
+      className="zamp-wallet-container"
+      key="nik"
+      onClick={[Function]}
+      role="presentation"
+    >
+      <div
+        className="zamp-wallet-label-container"
+      >
+        <img
+          alt=""
+          className="wallet-icons"
+          src="undefined/public/icons/pay-with-qr.svg"
+        />
+        <div
+          className="wallet-name"
+        >
+          Pay with QR
+        </div>
+      </div>
+      <div
+        className="arrow-container"
+      >
+        <img
+          alt=""
+          height="11"
+          src="undefined/public/images/right-arrow.svg"
+        />
+      </div>
+    </div>
+    <div
+      className="zamp-wallet-container"
+      key="Metamask"
+      onClick={[Function]}
+      role="presentation"
+    >
+      <div
+        className="zamp-wallet-label-container"
+      >
+        <img
+          alt="wallet-icon"
+          className="wallet-icons"
+          onError={[Function]}
+          src=""
+        />
+        <div
+          className="wallet-name"
+        >
+          Metamask
+        </div>
+      </div>
+      <div
+        className="arrow-container"
+      >
+        <img
+          alt=""
+          height="11"
+          src="undefined/public/images/right-arrow.svg"
+        />
+      </div>
+    </div>
+  </div>
+</WalletList>
+`;
