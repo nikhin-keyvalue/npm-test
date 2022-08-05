@@ -1,8 +1,9 @@
 {
-  "name": "nkn-sdk",
-  "version": "1.0.0",
-  "description": "Web SDK for Zamp crypto-payment gateway",
+  "name": "@nikhin-kv/nkn-sdk",
+  "version": "0.0.7",
+  "description": "Web gateway",
   "main": "dist/index.js",
+
   "types": "dist/types/index.d.ts",
   "scripts": {
     "serve": "cross-env webpack-dev-server --config webpack.local.js",
@@ -15,7 +16,7 @@
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' 'src/**/*.tsx' --write",
     "coverage": "npm run test -- --coverage"
   },
-  "author": "nikhin-kv",
+  "author": "nikhin-kv<nikhin@keyvalue.systems>",
   "license": "ISC",
   "dependencies": {
     "@ethersproject/abstract-provider": "^5.6.0",

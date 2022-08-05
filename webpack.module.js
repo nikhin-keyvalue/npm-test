@@ -4,6 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MergeIntoSingleFilePlugin = require('webpack-merge-and-include-globally');
 
 module.exports = (env) => ({
   entry: {
@@ -48,6 +49,13 @@ module.exports = (env) => ({
   plugins: [
     new Dotenv(),
     new CleanWebpackPlugin(),
+    new MergeIntoSingleFilePlugin({
+      files: {
+        'types/index.d.ts': [
+          path.resolve(__dirname, 'src/types/index.ts')
+        ]
+      }
+    }),
     new CopyPlugin({
       patterns: [
         { from: './public', to: './public' }
