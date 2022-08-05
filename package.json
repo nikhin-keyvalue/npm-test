@@ -1,6 +1,6 @@
 {
   "name": "@nikhin-kv/nkn-sdk",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Web gateway",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
